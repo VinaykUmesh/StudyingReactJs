@@ -1,6 +1,6 @@
 function hello(){
   const Pi ;
-  console.log(Pi)
+  console.log(Pi);
  let bestCricketer = "Virat";
  let team = "SA";
    if(team=='SA'){
