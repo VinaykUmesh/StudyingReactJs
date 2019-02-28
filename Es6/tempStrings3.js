@@ -1,12 +1,12 @@
 var list = document.querySelector(' .users_list ')
 
-function users(fname,lname){
+function users(firstname,lastname){
  
  var temp = `
  
  <div class="user">
- <div>${fname}</div>
-<div>${lname}</div>
+ <div>${firstname}</div>
+<div>${lastname}</div>
 </div>
  `;
 
