@@ -16,3 +16,19 @@ function templateStrings(){
 
 }
 templateStrings();
+
+
+const user = {
+    name :" umesh" ,
+    age : 23
+};
+
+console.log(`the name is ${user.name} and is ${user.age} is years old.`)
+
+function req(page,id){
+
+     const URL = `http://www.servernow/${page}/${id}`;
+
+     console.log(URL);
+}
+return req('page',6)
