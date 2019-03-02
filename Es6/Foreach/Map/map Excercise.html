@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Map Exercise one00</title>
+</head>
+<body>
+ <div class="show"></div>
+</body>
+
+
+<br>
+<br>
+
+<div class="shows">
+
+</div>
+<script>
+    const paintings = [
+       {name:'Mona lisa',width:200,height:200},
+       {name:'The scream',width:400,height:600},
+       {name:'The last supper',width:600,height:700}
+    ]
+    const painter = paintings.map(function(paint){
+     return `${paint.name} is ${paint.width}x${paint.height}`;
+})
+    console.log(painter)
+</script>
+<script>
+    const cars = [
+       {name:'Ford',price:200},
+       {name:'Nissan',price:400},
+       {name:'Nissan',price:600}
+    ]
+    function converter(prices){
+     return prices * 71 ;
+    }
+
+    const listOfcars = cars.map(function(car){
+     return `${car.name} is ${converter(car.price)} rupees`;
+    })
+   console.log(listOfcars) 
+
+</script>
+</html>

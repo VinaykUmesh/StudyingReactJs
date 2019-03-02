@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Map Example</title>
+</head>
+<body>
+<p> Map helper is usefull when we using in it react js 
+ and always return something</p><br>
+ <br>
+</body>
+<script>
+const  numbers = [1,2,3,4,5];
+const otherarray = [];
+
+// ES5 Method
+for(i=0 ; i<numbers.length;i++){
+   otherarray.push(numbers[i] * 10) 
+}
+console.log(otherarray)
+
+//In ES6
+const oA = numbers.map(function(number){
+return number*10
+
+})
+console.log(oA)
+
+</script>
+
+</html>
