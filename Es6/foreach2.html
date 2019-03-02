@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Foreach Example 2</title>
+
+</head>
+<body>
+ 
+</body>
+<script>
+const names = ['vinayk','umesh','eswaran'];
+
+names.forEach(function(name){
+  document.body.insertAdjacentHTML("beforeend",`<div> Hi my name is ${name}</div>`)
+})
+
+//or 
+let temp=  ' ';
+names.forEach(function(name){
+temp+=`<div>Hi my name is ${name}</div>`;
+
+})
+document.body.insertAdjacentHTML("afterbegin",temp)
+
+</script>
+</html>

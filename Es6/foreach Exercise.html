@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>ForEach Exercises</title>
+ <style>
+  .product {
+      border: 1px solid #d2d2d2;
+      box-sizing: border-box;
+      padding:20px;
+      width:250px;
+      float:left;
+      margin:10px;
+  }
+  .product h1 {
+      margin: 0 0 10px;
+      color: #03A9F4;
+  }
+  .product span {
+      background: #F44336;
+      color: #fff;
+      padding: 5px;
+  }
+</style>
+</head>
+<body>
+  <div class="product">    
+ </div>
+ 
+</body>
+<script>
+const div = document.querySelector('.product')
+var products = [
+       {name:'Iphone',price:200},
+       {name:'Motorola',price:70},
+       {name:'Samsung',price:150},
+       {name:'Sony',price:98},
+       {name:'Windows pone',price:10}
+    ];
+    var list = ' ';
+    products.forEach(function(item){
+
+     function discount(){
+      if(item.price<100){
+       return `<span>On sale !!</span>`
+      }
+
+     }
+
+     list+=`  <h1>${item.name}</h1>
+    <strong>Price: $${item.price} </strong>
+    ${discount()}`
+    });
+    div.insertAdjacentHTML("beforeend",list)
+</script>
+</html>

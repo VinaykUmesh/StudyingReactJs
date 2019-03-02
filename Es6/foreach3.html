@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Foreach Example 3</title>
+
+</head>
+<body>
+ 
+</body><script>
+var purchases =[{
+     quantity:10,amount:1000,
+     quantity:20,amount:1000,
+     quantity:30,amount:1000
+    }]
+// In ES5
+
+for(i=0; i<purchases.length;i++){
+document.write(purchases[i].quantity * purchases[i].amount);
+}
+// In ES6
+var total = 0;
+purchases.forEach(function(items){
+total +=items.quantity * items.amount
+
+})
+document.write(total);
+</script>
+</html>
