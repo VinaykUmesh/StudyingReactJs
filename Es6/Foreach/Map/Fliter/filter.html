@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Fliter Exampless</title>
+</head>
+<body>
+ 
+</body>
+<script>
+const products = [
+ {name: 'sony' , category : 'TV' , Price :200},
+ {name: 'philips' , category : 'TV' , Price :400},
+ {name: 'iphone ' , category : 'Phone' , Price :4400},
+ {name: 'whirlpool' , category : 'Fridge' , Price :1200},
+]
+
+const result = products.filter(function(product){
+ return product.category === 'TV' && product.Price >= 200
+})
+console.log(result)
+</script>
+</html>
