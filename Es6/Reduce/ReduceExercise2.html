@@ -19,12 +19,12 @@
     ];
 
     let os = computers.reduce(function(sum,computer){
-     // if (computer.os === 'Mac'){
-     //      return  {mac :sum. mac+1 ,windows : sum.windows + 0}
-     // }else{
-     //  return {mac :sum. mac+0,windows : sum.windows + 1}
-     // }
-     return computer.os === 'Mac' ? {mac:sum.mac +1, windows : sum.windows + 0} : {mac : sum.mac +0 , windows : sum.windows + 1}
+      if (computer.os === 'Mac'){
+           return  {mac :sum. mac+1 ,windows : sum.windows + 0}
+      }else{
+       return {mac :sum. mac+0,windows : sum.windows + 1}
+      }
+     //return computer.os === 'Mac' ? {mac:sum.mac +1, windows : sum.windows + 0} : {mac : sum.mac +0 , windows : sum.windows + 1}
 
     },{mac :0, windows : 0} )
  console.log(os)   
