@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Document</title>
+</head>
+<body>
+ <label >Price</label>
+ <select id="price">
+  <option value="100">Less than 100</option>
+  <option value="300">Less than 300</option>
+  <option value="500">Less than 500</option>
+ </select>
+ <label for="">Type</label>
+ <select name="" id="type">
+  <option value="Sport car">Sport car</option>
+  <option value="Wagon">Wagon</option>
+  <option value="Urban">Urban</option>
+ </select>
+ <br>
+ <br>
+ <div class="search">Search</div>
+</body>
+<script>
+const brand = [
+ {name : 'Umesh', id : 3},
+ {name : 'magesh', id : 2},
+ {name : 'vinayk', id : 5},
+ {name : 'eswaran', id : 7},
+ {name : 'Umesh', id : 4}
+];
+const result = brand.find(function (brands){
+ return brands.name === 'Umesh'
+})
+console.log(result)
+</script>
+<script>
+const cars = [
+ {brand: "ford" , price : 500 , available : 2 , type : "Sport car"},
+ {brand: "Nissan" , price : 200 , available : 5 , type : "Wagon"},
+ {brand: "chevy" , price : 300 , available : 4 , type : "Sport car"},
+ {brand: "Porsche" , price : 100 , available : 3 , type : "Urban"},
+];
+ function getResults(price,type){
+  return cars.find(function(car){
+   return car.price<price
+   && car.type === type
+   && car.available > 0
+  })
+ } 
+document.querySelector(".search").addEventListener("click",function(){
+
+ let price =parseInt (document.querySelector("#price").value)
+ let type = document.querySelector("#type").value
+let result = getResults(price,type)
+ if (result){
+  console.log(`${result.brand} and price is ${result.price}`)
+ }else{
+  console.log("no cars available")
+ }
+})
+
+</script>
+
+</html>
