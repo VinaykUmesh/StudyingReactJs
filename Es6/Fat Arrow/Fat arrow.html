@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Document</title>
+</head>
+<body>
+ 
+</body>
+
+<script>
+    var names= ["James","Ron","Lisa","Tommy"];
+    var randomName = (items) => {
+     return items[Math.floor(Math.random()*items.length)]
+    }
+    var randomNumber =(maxNumber,minNumber){
+     return Math.floor(Math.random() * maxNumber) + minNumber;
+    }
+    console.log(randomName(names) + " magic number is " + randomNumber(5,2))
+</script>
+</html>
