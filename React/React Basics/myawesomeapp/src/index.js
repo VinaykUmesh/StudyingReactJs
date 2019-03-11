@@ -19,7 +19,6 @@ const App = ( ) => {
          return (
             <div>
                 <div><Header/></div>
-                
             </div>
         )
 

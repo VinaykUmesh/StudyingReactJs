@@ -1,29 +1,17 @@
- import React from 'react';
+import React,{ Component } from 'react';
+import '../css/styles.css'
 
-
-class Header extends React.Component (){
+class Header extends Component {
             render(){
-                 const styles = {
-                       header :{ 
-                        background : 'tomato'
-                      
-                      },
-                      logo :{
-                       color :  '#fff',
-                       
-                       textAlign : 'center'
-
-                      }
-                 }
-
-            return (
-               <header  style={styles.header}>
-               <div  style={styles.logo}>LOGO</div>
-               <div><input type="text"/></div>
+                 return (
+               <header >
+               <div className="logo">LOGO</div>
+               <div ><input type="text"/></div>
                </header>
             )
            }
+          }
 
-}
+
 
 export default Header;
