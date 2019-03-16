@@ -2,14 +2,24 @@ import React,{ Component } from 'react';
 import '../css/styles.css'
 
 class Header extends Component {
+  state ={
+     active:false,
+     kewords:''
+   }
 
-  oninputclick (event) {
-    console.log(event.target.value)
+  oninputclick = (event) => {
+
+    const value = event.target.value === ' ' ? false : true ;
+    this.setState({
+      active : value,
+      kewords : ' event.target.value'
+    });
+
 
   }
             render(){
                  return (
-               <header >
+               <header style={{background:`${this.state.active ? 'red': 'blue'}`}}>
                <div className="logo" >TIMES</div>
                <div ><input type="text"   onChange={(e) => this.oninputclick(e)}/></div>
                </header>
