@@ -1,6 +1,9 @@
 import React from 'react';
 import NewsItem from './newsitem';
 
+//styles
+import '../css/styles.css';
+
 const NewsList = (props) => {
           const items = props.news.map( (item)=> {
            return (
@@ -8,7 +11,10 @@ const NewsList = (props) => {
            )
           })
       return(
-       <div>{items}</div>
+          
+          <div className="content">{props.children}
+          {items}</div>
+       
       )
 }
 

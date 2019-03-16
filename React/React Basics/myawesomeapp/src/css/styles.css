@@ -4,7 +4,7 @@ body {
 }
 
 header {
-    background: tomato;
+    background: #e81148;
     text-align: center;
 }
 
@@ -18,5 +18,8 @@ header {
 header input{
     font-size: 20px;
     margin: 20px 0;
+}
+.content{
+    text-align: center;
 }
 
