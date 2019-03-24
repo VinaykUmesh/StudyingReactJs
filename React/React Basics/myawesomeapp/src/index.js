@@ -16,15 +16,30 @@ import NewsList from './assets/newslist.js';
 
 class App extends Component{
     state ={
-        news : JSON
+        news : JSON,
+        filtered : []
     }
+    getKeyword = (e) => {
+        let key = e.target.value;
+        let filtered = this.state.news.filter((item)=> {
+                return item.title.indexOf(key) > -1
+        });
+        this.setState ={
+            filtered 
+        }
+        console.log(filtered)
+    }
+  
     render(){
-        
+       let newsFiltered = this.state.filtered;
+       let newsFull = this.state.news;
+
+
          return (
             <div>
-                <Header/>
+                <Header keyword={this.getKeyword}/>
 
-                <NewsList news={this.state.news}>
+                <NewsList news={newsFiltered.length === 0 ? newsFull : newsFiltered  }>
                 <h3>
                     The Headlines 
                 </h3>
