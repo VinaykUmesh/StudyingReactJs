@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter , Route } from 'react-router-dom';
+import { BrowserRouter , Route, Link } from 'react-router-dom';
 
 
 //components
@@ -13,7 +13,12 @@ const App = ( )=> {
  return (
           <BrowserRouter>
                 <div>
-                 <header>Header</header>
+                 <header>
+                              <Link to='/'>Home</Link><br/>
+                              <Link to='/Posts'>Posts</Link><br/>
+                              <Link to='/Profiles'>Profiles</Link><br/>
+                              <hr/>
+                 </header>
                      <Route path="/" exact  component={Home}/>
                      <Route path="/Posts" component={Posts}/>
                      <Route path="/Profiles" component={Profiles}/>           
