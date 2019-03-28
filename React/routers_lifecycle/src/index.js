@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter , Route, Link } from 'react-router-dom';
+import { BrowserRouter , Route, Link , NavLink , Switch } from 'react-router-dom';
 
 
 //components
 import Home from './components/Home';
 import Posts from './components/Posts';
 import Profiles from './components/Profiles';
+import PostItem from './components/post_item';
 
 
 const App = ( )=> {
@@ -15,14 +16,22 @@ const App = ( )=> {
                 <div>
                  <header>
                               <Link to='/'>Home</Link><br/>
-                              <Link to='/Posts'>Posts</Link><br/>
+                              <NavLink
+                               to='/Posts'
+                               activeStyle ={{color: 'black'}}
+                               activeClassName="active-state"
+                              
+                               >Posts</NavLink><br/>
                               <Link to='/Profiles'>Profiles</Link><br/>
                               <hr/>
                  </header>
-                     <Route path="/" exact  component={Home}/>
-                     <Route path="/Posts" component={Posts}/>
-                     <Route path="/Profiles" component={Profiles}/>           
-                </div>                 
+                 <Switch>
+                          <Route path="/Posts/:id/:username" component={PostItem}/>
+                          <Route path="/Profiles" component={Profiles}/>           
+                          <Route path="/Posts"  component={Posts}/>
+                          <Route path="/"   component={Home}/>  
+                 </Switch>
+                     </div>                 
           </BrowserRouter>
  )
 }
