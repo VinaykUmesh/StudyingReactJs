@@ -29,7 +29,8 @@ const App = ( )=> {
                           <Route path="/Posts/:id/:username" component={PostItem}/>
                           <Route path="/Profiles" component={Profiles}/>           
                           <Route path="/Posts"  component={Posts}/>
-                          <Route path="/"   component={Home}/>  
+                          <Route path="/"  exact  component={Home}/>  
+                          <Route component={Posts} />
                  </Switch>
                      </div>                 
           </BrowserRouter>
