@@ -9,6 +9,7 @@ import Posts from './components/Posts';
 import Profiles from './components/Profiles';
 import PostItem from './components/post_item';
 import Life from './components/lifecycles';
+import Conditional from  './components/conditional';
 
 
 const App = ( )=> {
@@ -25,10 +26,12 @@ const App = ( )=> {
                                >Posts</NavLink><br/>
                               <Link to='/Profiles'>Profiles</Link><br/>
                               <Link to='/Life'>Life</Link><br/>
+                              <Link to='/Conditional'>Conditional</Link><br/>
                               <hr/>
                  </header>
                  <Switch>
                           <Route path="/Posts/:id/:username" component={PostItem}/>
+                          <Route path="/Conditional"  exact  component={Conditional}/>  
                           <Route path="/Life"  exact  component={Life}/>  
                           <Route path="/Profiles" component={Profiles}/>           
                           <Route path="/Posts"  component={Posts}/>

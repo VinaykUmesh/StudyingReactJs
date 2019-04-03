@@ -1,6 +1,6 @@
-import React,{Component} from 'react';
+import React,{PureComponent} from 'react';
 
-class Life extends Component {
+class Life extends PureComponent {
   //1. get default props
  
 
@@ -9,30 +9,30 @@ class Life extends Component {
    title : 'Life cycles'
  }
   //3.before render
-  componentWillMount(){
-     console.log('Before Render')
-  }
-  componentWillUpdate(){
-     console.log('Before UPDATE')
-  }
-  componentDidUpdate(){
-   console.log('After update')
-  }
+  // componentWillMount(){
+  //    console.log('Before Render')
+  // }
+  // componentWillUpdate(){
+  //    console.log('Before UPDATE')
+  // }
+  // componentDidUpdate(){
+  //  console.log('After update')
+  // }
 
-  shouldComponentUpdate(nextProps,nextState){
-          console.log(nextState)
+  // shouldComponentUpdate(nextProps,nextState){
           
-          if(nextState.title === 'Something Else'){
-           return false
-          }
-          return true;
-  }
-  componentWillReceiveProps(){
-     console.log('Before Receive Props')
-  }
-  componentWillUnmount(){
-      console.log('Unmount')
-  }
+          
+  //         if(nextState.title === this.state.title){
+  //          return false
+  //         }
+  //         return true;
+  // }
+  // componentWillReceiveProps(){
+  //    console.log('Before Receive Props')
+  // }
+  // componentWillUnmount(){
+  //     console.log('Unmount')
+  // }
   //4. Render jsx
     render(){
      console.log('render')
