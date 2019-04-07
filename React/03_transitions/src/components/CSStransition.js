@@ -13,4 +13,4 @@ class Fade extends Component{
 }
 
 
-export default Fade;no
+export default Fade;

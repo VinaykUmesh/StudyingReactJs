@@ -23,8 +23,7 @@ class TransitionComp extends Component{
                 <Transition
                  in={this.state.show}
                  timeout={2000}
-                mountOnEnter
-                unmountOnExit
+
                 
                 >
                 {state => 
@@ -32,8 +31,8 @@ class TransitionComp extends Component{
                     
                     background: 'tomato',
                     height : '100px',
-                    transition : 'all 2s ease',
-                    opacity : state === 'exited' || state === 'exiting' ? 0 : 1
+                    transition : 'all 2s',
+                    opacity : state === 'exited' || state === 'exiting' ? 0 : 1,    
                     }}>
                         {state}
                     </div>
