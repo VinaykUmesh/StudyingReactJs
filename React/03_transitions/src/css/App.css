@@ -100,8 +100,37 @@
 /*=======================================
                 CSSTRANSITIONS
 ========================================*/
+.square.false {
+  background: #E91E63;
+  transform: translateX(-100%);  
+}
+.square.true {
+  background: chartreuse;
+}
 
+.square-enter.square-enter-active{
+  background: yellow;
+}
+
+.square-exit.square-exit-active{
+  background: #F44336;
+}
 /*=======================================
                 TRANSITIONS GROUP 
 ========================================*/
 
+.item{
+  opacity: 0;
+  transform: translateX(-100%);  
+  transition: all .5s ease-in;  
+}
+.item.active,
+.item-enter.item-enter-active{
+  opacity: 1;
+  transform: translateX(0%); 
+}
+
+.item-exit.item-exit-active{
+  transform: translateX(-100%); 
+
+}
