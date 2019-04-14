@@ -17,7 +17,7 @@ User_template.propTypes = {
               PropTypes.oneOf(['Vinayk','Umesh']),
          ]),
          lastname:PropTypes.string,
-         age:PropTypes.number,
+         age:PropTypes.number, 
          english:PropTypes.bool,
          cars:PropTypes.arrayOf(PropTypes.string),
          message:PropTypes.func,
