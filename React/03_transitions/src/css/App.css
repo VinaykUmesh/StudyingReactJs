@@ -46,6 +46,12 @@
 .btn-remove {
     background: #F44336;
 }
+.btn-removeAll {
+  background: rgb(130, 244, 54);
+  color: #FFf;
+  text-align: center;
+  padding: 10px;
+}
 
 .anim_index {
     border-bottom: 1px solid #d4d4d4;

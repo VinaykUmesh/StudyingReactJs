@@ -38,6 +38,13 @@ class Slide extends Component{
         })
     }
 
+    removeAll(){
+        let newArray = this.state.items.slice(0,0);
+        this.setState({
+            items:newArray
+        })
+    }
+
     render(){
         return(
             <div>
@@ -52,6 +59,7 @@ class Slide extends Component{
                 <div className="btns">
                     <div className="btn-add" onClick={()=> this.generateNumber()}>Add Elements</div>
                     <div className="btn-remove" onClick={()=> this.removeNumber()}>Remove Elements</div>
+                    <div className="btn-removeAll" onClick={()=> this.removeAll()}>Remove All Elements</div>
                 </div>
             </div>
         )
