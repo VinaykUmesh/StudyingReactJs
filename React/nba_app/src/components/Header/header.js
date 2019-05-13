@@ -9,7 +9,7 @@ const Header = (props) => {
 
 
    const  navBars = () => (
-         <div classname={style.navbars}>
+         <div className={style.navbars}>
              <FontAwesome name="bars" 
                 onClick={props.onOpenNav}
                 style={{

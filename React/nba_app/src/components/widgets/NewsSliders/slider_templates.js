@@ -16,7 +16,7 @@ const SliderTemplates = (props) => {
 
       switch(props.type){
           case('featured'):
-              template = props.data.map ( (item,i)=> {
+              template = props.data.map( (item,i)=> {
                return (
                   <div key={i}>
                     <div className={styles.featured_item}> 
