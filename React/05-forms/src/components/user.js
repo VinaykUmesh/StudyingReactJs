@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import FormFields from '../widgets/FormFields/formFields';
 
 class User extends Component {
 
     state = {
-        fromData:{
+        formData:{
             name :{
                 element : 'Name',
                 value: ' ',
@@ -23,7 +24,7 @@ class User extends Component {
                 config : {
                     name : 'name_input',
                     type : 'text',
-                    placeholders : 'Enter Your LAstname'
+                    placeholders : 'Enter Your Lastname'
                 } 
             }
         }
@@ -34,7 +35,10 @@ class User extends Component {
         return(
             <div className="container"> 
                 <form onSubmit={this.submitForm}>
-                    
+                    <FormFields 
+                    formData={this.state.formData}
+                    />   
+                    <button type="submit">Sign in</button>
                 </form>
             </div>
         )
