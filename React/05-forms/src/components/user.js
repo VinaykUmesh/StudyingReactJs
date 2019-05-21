@@ -6,29 +6,32 @@ class User extends Component {
     state = {
         formData:{
             name :{
-                element : 'Name',
-                value: ' ',
+                element : 'input',
+                value: '',
                 label : true,
                 labelText : 'Name',
                 config : {
                     name : 'name_input',
                     type : 'text',
-                    placeholders : 'Enter Your Name'
+                    placeholder : 'Enter Your Name'
                 } 
             },
             lastname :{
-                element : 'Lastame',
-                value: ' ',
+                element : 'input',
+                value: '',
                 label : true,
                 labelText : 'Lastname',
                 config : {
                     name : 'name_input',
                     type : 'text',
-                    placeholders : 'Enter Your Lastname'
+                    placeholder : 'Enter Your Lastname'
                 } 
             }
         }
-        
+    }
+
+    changeHandler = (newState)=>{
+        console.log(newState)
     }
 
     render(){
@@ -36,7 +39,9 @@ class User extends Component {
             <div className="container"> 
                 <form onSubmit={this.submitForm}>
                     <FormFields 
-                    formData={this.state.formData}
+                        formData={this.state.formData}
+                        change={
+                            (newState)=>this.changeHandler(newState)}
                     />   
                     <button type="submit">Sign in</button>
                 </form>

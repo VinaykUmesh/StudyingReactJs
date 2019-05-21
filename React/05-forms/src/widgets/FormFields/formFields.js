@@ -11,20 +11,42 @@ const FormFields = (props) => {
                  id:elementName,
                  settings: props.formData[elementName]
              })
-
-             console.log(formArray)
-            
-            // return formArray.map((item,i)=>{
-            //    return( 
-            //      <div key={i} className="form_element">
-            //         input
-            //     </div>
-            //     )
-            // })
-
         }
+        return formArray.map((item,i)=>{
+            return( 
+              <div key={i} className="form_element">
+                 {renderTemplate(item)}
+             </div>
+             )
+         })
+
     }
 
+         const renderTemplate =(data)=>{
+             let formTemplate ='';
+             let values = data.settings;
+
+            switch(values.element){
+                case('input'):
+                formTemplate = (
+                    <div>
+                        {values.label?
+                        <label>{values.labelText}</label>
+                    :null
+                    }
+                    <input
+                    {...values.config}
+                    value={values.value}
+                    />
+                    </div>
+                )
+                break;
+                default:
+                    formTemplate=null;
+            }
+            return formTemplate
+
+         }
 
     return (
         <div>
