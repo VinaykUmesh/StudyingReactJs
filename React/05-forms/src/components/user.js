@@ -30,7 +30,9 @@ class User extends Component {
         }
     }
 
-    changeHandler = (newState)=>{
+    updateForm = (newState)=>{
+
+
         console.log(newState)
     }
 
@@ -41,7 +43,7 @@ class User extends Component {
                     <FormFields 
                         formData={this.state.formData}
                         change={
-                            (newState)=>this.changeHandler(newState)}
+                            (newState)=>this.updateForm(newState)}
                     />   
                     <button type="submit">Sign in</button>
                 </form>
